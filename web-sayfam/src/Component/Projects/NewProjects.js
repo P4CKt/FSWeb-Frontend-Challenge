@@ -1,26 +1,10 @@
+import { enData, trData } from "../../data";
+import * as React from "react";
+import { ToggleContext } from "../Context";
 function NewProjects() {
-  const data = [
-    {
-      id: "01",
-      name: "A Gratitude Journal",
-      description:
-        " A gratitude journal is a type of personal journal in which an individual cultivates a positive mindset by focusing on the good things in their life. By regularly recording and reflecting on things they are thankful for, they can experience a sense of gratitude and develop a more positive outlook. This simple yet effective method can contribute to improved mental well-being and greater overall happiness.",
-      skills: ["react", "vercel", "axios", "router"],
-      mlink: "https://github.com/P4CKt",
-      plink: "https://fsweb-s10-challenge-lime.vercel.app/",
-      pnglink: "./img/minnet-g.png",
-    },
-    {
-      id: "02",
-      name: "Watchlist",
-      description:
-        " Let me introduce you to a movie project that you'll love! This project is a fantastic tool that allows you to change the details of the movies you've watched, add your favorites, and easily select the next movie you want to watch. This project is perfect for any movie lover. It's ideal for keeping track of the movies you've watched, saving your favorites, and discovering new movies. Additionally, using this project can help you gain a better understanding of the film world.  Try the project now and take full control of the movies you've watched!",
-      skills: ["react", "vercel", "prasa", "axios", "router"],
-      mlink: "https://github.com/P4CKt/fsweb-s10g3-redux-watchlist",
-      plink: "https://fsweb-s10g3-redux-watchlist-sigma.vercel.app/",
-      pnglink: "./img/movie-g.png",
-    },
-  ];
+  const { language } = React.useContext(ToggleContext);
+
+  const data = language === "en" ? enData.project : trData.project;
   const colors = [
     "bg-[#E3E6A1]",
     "bg-[#DEC08F]",
@@ -67,13 +51,13 @@ function NewProjects() {
                   href={item.mlink}
                   className=" flex-1 no-underline text-black text-left"
                 >
-                  View on Github
+                  {language === "en" ? "View on Github" : "Github"}
                 </a>
                 <a
                   href={item.plink}
                   className=" text-right no-underline text-black flex-1 pr-[3.9rem]"
                 >
-                  Go to app →
+                  {language === "en" ? " Go to app →" : "Uygulamaya Git→"}
                 </a>
               </div>
             </div>

@@ -12,9 +12,12 @@ function Home() {
     window.localStorage.getItem("theme") === "true" ? 1 : 0
   );
   const [toggle, setToggle] = useState(!tMemory);
+  const [language, setLanguage] = useState("tr");
 
   function handleClick() {
     setToggle(!toggle);
+    console.log(toggle);
+    console.log(language);
     window.localStorage.setItem("theme", toggle);
   }
   useEffect(() => {
@@ -25,7 +28,9 @@ function Home() {
 
   return (
     <div className="">
-      <ToggleContext.Provider value={{ handleClick, toggle }}>
+      <ToggleContext.Provider
+        value={{ handleClick, toggle, tMemory, language, setLanguage }}
+      >
         <Theme />
         <Hero />
         <Skills />

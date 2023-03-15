@@ -1,11 +1,12 @@
-import React from "react";
-
+import * as React from "react";
+import { ToggleContext } from "./Context";
 function Skills() {
+  const { language } = React.useContext(ToggleContext);
   return (
     <div className=" pt-[1rem] sm:pt-[4rem] lg:pt-32 dark:bg-[#12121249] px-[2rem] md:px-[5rem] xl:px-[20.18rem] pb-[5rem] xl:pb-[12.96rem] ">
       <div>
         <h1 className="font-[500] font-['Inter'] text-[#0A0A14] mt-0 mb-[2rem] md:mb-[5.6rem] text-[2.4rem] xl:text-[48px] tracking-[.01em] ">
-          Skills
+          {language === "en" ? "Skills" : "Yetenekler"}
         </h1>
         <div className="flex text-[10px] flex-wrap md:text-[20px] rounded-[6px] justify-center dark:text-black text-[#777777] font-[500] font-['Inter'] ">
           <div className=" mx-[1.75rem] mb-[1rem]">

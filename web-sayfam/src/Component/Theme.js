@@ -5,7 +5,8 @@ import Switch from "@mui/material/Switch";
 import { ToggleContext } from "./Context";
 
 function Theme() {
-  const { handleClick, toggle } = React.useContext(ToggleContext);
+  const { handleClick, toggle, language, setLanguage } =
+    React.useContext(ToggleContext);
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -55,12 +56,37 @@ function Theme() {
   }));
 
   return (
-    <div className="h-[36px] w-[100%] text-right fixed mb-[50px] dark:text-yellow-300 dark:bg-[#121212] bg-[#F4F4F4]">
+    <div className="h-[36px] w-[100%] flex justify-end fixed mb-[55px] dark:text-yellow-300 dark:bg-[#121212] bg-[#F4F4F4]">
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 0.1 }} checked={toggle} />}
         label="Dark & Light"
         onClick={handleClick}
       />
+      <form>
+        <div>
+          <input
+            type="radio"
+            id="tr"
+            name="drone"
+            value="tr"
+            checked={language === "tr"}
+            onChange={() => setLanguage("tr")}
+          ></input>
+          <label htmlFor="tr">Türkçe</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="en"
+            name="drone"
+            checked={language === "en"}
+            onChange={() => setLanguage("en")}
+            value="en"
+          ></input>
+          <label htmlFor="en">English</label>
+        </div>
+      </form>
     </div>
   );
 }

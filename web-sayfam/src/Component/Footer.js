@@ -1,6 +1,9 @@
-import React from "react";
-
+import * as React from "react";
+import { ToggleContext } from "./Context";
+import { enData, trData } from "../data";
 function Footer() {
+  const { language } = React.useContext(ToggleContext);
+  const data = language === "en" ? enData : trData;
   return (
     <div className="flex font-['Inter'] justify-center dark:bg-[#12121280] pb-[2.72rem] pt-[2rem] lg:pb-[18rem] lg:pt-[13.1rem]">
       <div className="flex xl:ml-[22.1rem] ml-[3rem] ">
@@ -19,10 +22,25 @@ function Footer() {
         </h1>
       </div>
       <div className="flex ml-[2rem] xl:ml-[5.92rem] text-left xl:text-[2.4rem] justify-center lg:text-[2rem] md:text-[1.6rem] sm:text-[1.2rem] text-[1rem] mr-[15rem] xl:mr-[34.1rem] font-[500] flex-col">
-        <p className="text-[#1769FF] my-1">Github</p>
+        <p className="text-[#1769FF] my-1">
+          <a className="text-[#0077B5] no-underline " href={`${data.github}`}>
+            Github
+          </a>
+        </p>
         <p className="my-1 	 ">Personal Blog</p>
-        <p className="text-[#0077B5] my-1">Linkedin</p>
-        <p className="text-[#AF0C48] my-1">Email</p>
+        <p className=" my-1">
+          <a className="text-[#0077B5] no-underline " href={`${data.linkedin}`}>
+            Linkedin
+          </a>
+        </p>
+        <p className=" my-1">
+          <a
+            className="text-[#AF0C48] no-underline "
+            href={`mailto:${data.email}`}
+          >
+            Email
+          </a>
+        </p>
       </div>
     </div>
   );
