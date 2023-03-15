@@ -48,9 +48,10 @@ function Hero() {
                 </span>{" "}
                 Projelerinde Çalışıyor.
                 <br /> Ekibine Davet Edebilirsin →
-                <span className="text-[#AF0C48] underline underline-offset-4 ">
-                  {" "}
-                  {data.email}
+                <span className=" underline underline-offset-4 ">
+                  <a className="text-[#AF0C48]" href={`mailto:${data.email}`}>
+                    {data.email}
+                  </a>
                 </span>
               </p>
             ) : (

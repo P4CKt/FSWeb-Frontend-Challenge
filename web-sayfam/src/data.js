@@ -9,7 +9,7 @@ export const trData = {
       name: "Minnet günlüğü",
       description:
         "Minnet günlüğü, hayatındaki olumlu şeylere odaklanarak minnettarlık ve şükran duygularını sık sık hissetmek isteyenler için mükemmel bir günlük türüdür. Kişi, düzenli olarak kaydedip düşündüğü şeylere teşekkür ederek, daha olumlu bir bakış açısı geliştirebilir ve zihinsel iyi oluşa katkıda bulunabilir. Basit fakat oldukça etkili bir yöntemdir ve hayatın güzelliklerine daha fazla odaklanarak mutluluğu artırmaya yardımcı olabilir",
-      skills: ["react", "vercel", "axios", "router"],
+      skills: ["react", "axios", "router", "toastify", "redux"],
       mlink: "https://github.com/P4CKt",
       plink: "https://fsweb-s10-challenge-lime.vercel.app/",
       pnglink: "./img/minnet-g.png",
@@ -19,7 +19,7 @@ export const trData = {
       name: "Film İzleme Listesi",
       description:
         " Size tanıtmak istediğim bir film projesi var! Bu proje, izlediğiniz filmlerin detaylarını değiştirebileceğiniz, favorilerinizi ekleyebileceğiniz ve kolayca bir sonraki izleyeceğiniz filmi seçmenize yardımcı olabilecek harika bir araçtır.Bu proje, herhangi bir film sever için harika bir araçtır. İzlediğiniz filmleri takip etmek, favorilerinizi kaydetmek ve daha fazla film keşfetmek için idealdir. Tüm bunlarla birlikte, bu projeyi kullanarak film dünyasında daha iyi bir anlayış kazanabilirsiniz.Hemen projeyi deneyin ve izlediğiniz filmlerin tam kontrolünü elinizde tutun!",
-      skills: ["react", "vercel", "prasa", "axios", "router"],
+      skills: ["react", "vercel", "router", "redux"],
       mlink: "https://github.com/P4CKt/fsweb-s10g3-redux-watchlist",
       plink: "https://fsweb-s10g3-redux-watchlist-sigma.vercel.app/",
       pnglink: "./img/movie-g.png",
@@ -46,7 +46,7 @@ export const enData = {
       name: "A Gratitude Journal",
       description:
         " A gratitude journal is a type of personal journal in which an individual cultivates a positive mindset by focusing on the good things in their life. By regularly recording and reflecting on things they are thankful for, they can experience a sense of gratitude and develop a more positive outlook. This simple yet effective method can contribute to improved mental well-being and greater overall happiness.",
-      skills: ["react", "vercel", "axios", "router"],
+      skills: ["react", "axios", "router", "toastify", "redux"],
       mlink: "https://github.com/P4CKt",
       plink: "https://fsweb-s10-challenge-lime.vercel.app/",
       pnglink: "./img/minnet-g.png",
@@ -56,7 +56,7 @@ export const enData = {
       name: "Watchlist",
       description:
         " Let me introduce you to a movie project that you'll love! This project is a fantastic tool that allows you to change the details of the movies you've watched, add your favorites, and easily select the next movie you want to watch. This project is perfect for any movie lover. It's ideal for keeping track of the movies you've watched, saving your favorites, and discovering new movies. Additionally, using this project can help you gain a better understanding of the film world.  Try the project now and take full control of the movies you've watched!",
-      skills: ["react", "vercel", "prasa", "axios", "router"],
+      skills: ["react", "vercel", "router", "redux"],
       mlink: "https://github.com/P4CKt/fsweb-s10g3-redux-watchlist",
       plink: "https://fsweb-s10g3-redux-watchlist-sigma.vercel.app/",
       pnglink: "./img/movie-g.png",

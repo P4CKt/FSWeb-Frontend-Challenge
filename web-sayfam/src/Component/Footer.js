@@ -5,7 +5,7 @@ function Footer() {
   const { language } = React.useContext(ToggleContext);
   const data = language === "en" ? enData : trData;
   return (
-    <div className="flex font-['Inter'] justify-center dark:bg-[#12121280] pb-[2.72rem] pt-[2rem] lg:pb-[18rem] lg:pt-[13.1rem]">
+    <div className="flex font-['Inter'] justify-center dark:bg-[#12121280] pb-[2.72rem] pt-[2rem] lg:pb-[5rem] lg:pt-[13.1rem]">
       <div className="flex xl:ml-[22.1rem] ml-[3rem] ">
         <h1 className=" my-0 font-[500] text-right xl:text-[4.2rem] lg:text-[3.2rem] md:text-[3rem] sm:text-[2.2rem] text-[2rem] leading-normal tracking-[.01em] ">
           Let’s
