@@ -11,19 +11,13 @@ function Hero() {
           <p className="font-[400] inline-block tracking-widest text-[20px] xl:text-[30px] leading-[36px] m-0 mb-[4.4rem] xl:mb-[8.1rem]">
             {language === "en" ? "Hi! 👋" : "Merhaba! 👋"}
           </p>
-          <div className="font-[500] box-border m-0 tracking-[.01em] leading-[3rem] xl:leading-[64px] text-[2rem] md:text-[3rem] xl:text-[4.2rem] lg:text-left ">
+          <div className="font-[500] box-border m-0 tracking-[.01em] leading-[5rem] xl:leading-[64px] text-[2rem] md:text-[3rem] xl:text-[4.2rem] lg:text-left ">
             <div
               className={
-                "xl:w-[14.4rem] w-[7rem] md:w-[9rem] h-[2rem] xl:h-[3.2rem] bg-[#E92577] rounded-[4px] xl:ml-[-1rem] ml-[-.7rem] mb-[-5.6rem] md:mb-[-6.8rem] xl:mb-[-11.2rem] mt-[-2.8rem]"
+                "xl:w-[14.4rem] w-[7rem] md:w-[9rem] h-[2rem] xl:h-[3.2rem] bg-[#E92577] rounded-[4px] xl:ml-[-1rem] ml-[-.7rem] mb-[-6.6rem] md:mb-[-7.8rem] xl:mb-[-11.2rem] mt-[-2.8rem]"
               }
             ></div>
-            <p
-              className={`${
-                data.hero.length > 180 ? "text-[36px]" : "text-[42px]"
-              } `}
-            >
-              {data.hero}
-            </p>
+            <p>{data.hero}</p>
           </div>
           <div>
             <div className="xl:mb-[1.6rem] text-center sm:text-left mt-[.1rem] xl:mt-[5.4rem]">

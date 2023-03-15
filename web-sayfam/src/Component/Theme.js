@@ -3,10 +3,13 @@ import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { ToggleContext } from "./Context";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 function Theme() {
   const { handleClick, toggle, language, setLanguage } =
     React.useContext(ToggleContext);
+
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -61,32 +64,32 @@ function Theme() {
         control={<MaterialUISwitch sx={{ m: 0.1 }} checked={toggle} />}
         label="Dark & Light"
         onClick={handleClick}
+        aria-label="Platform"
       />
-      <form>
-        <div>
-          <input
-            type="radio"
-            id="tr"
-            name="drone"
-            value="tr"
-            checked={language === "tr"}
-            onChange={() => setLanguage("tr")}
-          ></input>
-          <label htmlFor="tr">Türkçe</label>
-        </div>
-
-        <div>
-          <input
-            type="radio"
-            id="en"
-            name="drone"
-            checked={language === "en"}
-            onChange={() => setLanguage("en")}
-            value="en"
-          ></input>
-          <label htmlFor="en">English</label>
-        </div>
-      </form>
+      <ToggleButtonGroup
+        className="dark:bg-[#001e3b] text-blue-400 p-0 bg-yellow-50  "
+        exclusive
+        color="secondary"
+        value={language}
+      >
+        <ToggleButton
+          checked={language === "tr"}
+          onClick={() => setLanguage("tr")}
+          value="tr"
+          color="secondary"
+        >
+          Türkçe
+        </ToggleButton>
+        <ToggleButton
+          className="text-xl text-blue-400"
+          checked={language === "en"}
+          onClick={() => setLanguage("en")}
+          value="en"
+          color="secondary"
+        >
+          English
+        </ToggleButton>
+      </ToggleButtonGroup>
     </div>
   );
 }
