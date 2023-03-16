@@ -16,8 +16,7 @@ function Home() {
 
   function handleClick() {
     setToggle(!toggle);
-    console.log(toggle);
-    console.log(language);
+
     window.localStorage.setItem("theme", toggle);
   }
   useEffect(() => {
