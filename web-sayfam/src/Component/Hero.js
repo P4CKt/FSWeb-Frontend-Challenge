@@ -70,7 +70,7 @@ function Hero() {
         <div className="md:mb-[1rem] ml-[0.8rem] xl:mb-[4rem] xl:items-center flex xl:ml-[3.2rem]">
           <img
             className="w-[60vw] max-w-[34rem] min-w-[26rem] mt-[3rem] shadow-[-20px_-18px_0px_rgba(233,37,119,1)] rounded-[22px] "
-            src="./img/P4CK.png"
+            src="./img/myphoto.jpeg"
           ></img>
         </div>
       </div>
