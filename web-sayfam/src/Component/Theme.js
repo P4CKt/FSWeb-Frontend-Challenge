@@ -62,9 +62,6 @@ function Theme() {
     palette: {
       secondary: {
         main: "#FFD300",
-        dark: "#ba000d",
-        contrastText: "#000",
-        light: "#ff7961",
       },
     },
     spacing: 20,
@@ -80,7 +77,7 @@ function Theme() {
       />
       <ThemeProvider theme={theme}>
         <ToggleButtonGroup
-          className="dark:bg-[#28639b] bg-yellow-200  "
+          className="dark:bg-[#b2a02c] bg-yellow-200  "
           exclusive
           color="secondary"
           value={language}
