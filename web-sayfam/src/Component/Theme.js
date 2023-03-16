@@ -74,10 +74,11 @@ function Theme() {
         label="Dark & Light"
         onClick={handleClick}
         aria-label="Platform"
+        className=" pl-4"
       />
       <ThemeProvider theme={theme}>
         <ToggleButtonGroup
-          className="dark:bg-[#b2a02c] bg-yellow-200  "
+          className="dark:bg-[#7e753b] mr-4 bg-yellow-100  "
           exclusive
           color="secondary"
           value={language}
