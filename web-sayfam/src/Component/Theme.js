@@ -4,6 +4,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { ToggleContext } from "./Context";
 import ToggleButton from "@mui/material/ToggleButton";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 function Theme() {
@@ -57,39 +58,47 @@ function Theme() {
       borderRadius: 20 / 2,
     },
   }));
+  const theme = createTheme({
+    palette: {
+      secondary: {
+        main: "#FFD300",
+      },
+    },
+    spacing: 20,
+  });
 
   return (
-    <div className="h-[36px] w-[100%] flex justify-end fixed mb-[55px] dark:text-yellow-300 dark:bg-[#121212] bg-[#F4F4F4]">
+    <div className="h-[36px] w-[100%] flex justify-between fixed mb-[55px] dark:text-yellow-300 border-yellow-400 dark:bg-[#484242] bg-[#7b7878]">
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 0.1 }} checked={toggle} />}
         label="Dark & Light"
         onClick={handleClick}
         aria-label="Platform"
       />
-      <ToggleButtonGroup
-        className="dark:bg-[#001e3b] text-blue-400 p-0 bg-yellow-50  "
-        exclusive
-        color="secondary"
-        value={language}
-      >
-        <ToggleButton
-          checked={language === "tr"}
-          onClick={() => setLanguage("tr")}
-          value="tr"
+      <ThemeProvider theme={theme}>
+        <ToggleButtonGroup
+          className="dark:bg-[#09355f] bg-yellow-200  "
+          exclusive
           color="secondary"
+          value={language}
+          size="small"
         >
-          Türkçe
-        </ToggleButton>
-        <ToggleButton
-          className="text-xl text-blue-400"
-          checked={language === "en"}
-          onClick={() => setLanguage("en")}
-          value="en"
-          color="secondary"
-        >
-          English
-        </ToggleButton>
-      </ToggleButtonGroup>
+          <ToggleButton
+            checked={language === "tr"}
+            onClick={() => setLanguage("tr")}
+            value="tr"
+          >
+            Türkçe
+          </ToggleButton>
+          <ToggleButton
+            checked={language === "en"}
+            onClick={() => setLanguage("en")}
+            value="en"
+          >
+            English
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </ThemeProvider>
     </div>
   );
 }

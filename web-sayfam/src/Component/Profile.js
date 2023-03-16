@@ -1,6 +1,5 @@
 import * as React from "react";
 import { ToggleContext } from "./Context";
-
 import { enData, trData } from "../data";
 function Profile() {
   const { language } = React.useContext(ToggleContext);
@@ -46,7 +45,7 @@ function Profile() {
             </div>
           </div>
         </div>
-        <div className=" w-[48%] ml-[2rem] md:ml-[5.8rem] text-[1rem] sm:text-[1.3rem] lg:text-[18px] text-left leading-normal mr-[10rem] lg:mr-[21.6rem]">
+        <div className=" w-[48%] sm:ml-[2rem] md:ml-[5.8rem] text-[1rem] sm:text-[1.3rem] lg:text-[18px] text-left leading-normal sm:mr-[10rem] lg:mr-[21.6rem]">
           <h2 className="font-['Playfair-Display'] tracking-[.01em]  text-[24px] font-[400] sm:pt-[1.6rem] leading-[3.2rem]">
             {language === "en" ? "About me" : "Hakkımda"}
           </h2>
