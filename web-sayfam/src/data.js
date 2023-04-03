@@ -2,7 +2,7 @@ export const trData = {
   email: "omurcanuslu@outlook.com",
   github: "https://github.com/P4CKt",
   linkedin: "https://www.linkedin.com/in/omurcanuslu/",
-  hero: "Ben Ömürcan, junior seviyede geliştiriciyim ve React projelerinde Front-end ve UI kısımlarınıyla ilgileniyorum. ",
+  hero: "Ben Ömürcan, junior seviyede yazılım geliştiriciyim ve React projelerinde Front-end ve UI kısımlarınıyla ilgileniyorum. ",
   project: [
     {
       id: "01",
